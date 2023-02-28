@@ -13,4 +13,4 @@ target_include_directories(shape PUBLIC plugin)
 add_executable(demo main.cpp)
 
 target_link_libraries(demo shape)
-target_link_options(shape INTERFACE -u__ZN6Circle12m_registeredE)
+target_sources(shape INTERFACE ${CMAKE_CURRENT_LIST_DIR}/plugin/impl/Circle.cpp)
